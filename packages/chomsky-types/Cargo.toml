@@ -1,0 +1,16 @@
+[package]
+name = "chomsky-types"
+version = { workspace = true }
+edition = { workspace = true }
+authors = { workspace = true }
+license = { workspace = true }
+description = "Core types and definitions for Chomsky optimization framework"
+repository = "https://github.com/nyar-vm/project-chomsky/tree/main/packages/chomsky-types"
+homepage = "https://gaia-assembly.netlify.app/chomsky/types/"
+
+[dependencies]
+serde = { workspace = true }
+dashmap = { workspace = true }
+
+[dev-dependencies]
+serde_json = { workspace = true }

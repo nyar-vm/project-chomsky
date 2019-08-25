@@ -1,0 +1,12 @@
+[package]
+name = "chomsky-glue"
+version = { workspace = true }
+edition = { workspace = true }
+authors = { workspace = true }
+license = { workspace = true }
+description = "Interoperability and FFI glue layers for Chomsky"
+repository = "https://github.com/nyar-vm/project-chomsky/tree/main/packages/chomsky-glue"
+homepage = "https://gaia-assembly.netlify.app/chomsky/glue/"
+
+[dependencies]
+chomsky-uir = { workspace = true }

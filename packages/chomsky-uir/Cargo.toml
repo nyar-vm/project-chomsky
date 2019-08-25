@@ -1,0 +1,16 @@
+[package]
+name = "chomsky-uir"
+version = { workspace = true }
+edition = { workspace = true }
+authors = { workspace = true }
+license = { workspace = true }
+description = "Universal Intermediate Representation (UIR) for Chomsky framework based on E-Graph"
+repository = "https://github.com/nyar-vm/project-chomsky/tree/main/packages/chomsky-uir"
+homepage = "https://gaia-assembly.netlify.app/chomsky/uir/"
+
+[dependencies]
+chomsky-types = { workspace = true }
+oak-core = { workspace = true }
+serde = { workspace = true }
+dashmap = { workspace = true }
+hashbrown = { workspace = true }

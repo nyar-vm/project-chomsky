@@ -1,17 +1,92 @@
 [workspace]
 resolver = "2"
-members = ["projects/*"]
-default-members = [
-    "projects/nyar-hir",
-    "projects/nyar-vm",
-    "projects/nyar-error",
-    #    "projects/valkyrie-parser",
-    "projects/nyar-lir",
-]
-exclude = [
 
+members = [
+    "packages/chomsky-types",
+    "packages/chomsky-uir",
+    "packages/chomsky-rules",
+    "packages/chomsky-extract",
+    "packages/chomsky-glue",
+    "packages/chomsky-rule-engine",
+    "packages/chomsky-cost",
+    "packages/chomsky-concretize",
+    "packages/chomsky-context",
+    "packages/chomsky",
+    "packages/chomsky-lifetime",
+    "packages/chomsky-emit",
+    "packages/chomsky-linker",
 ]
 
-[profile.release]
-lto = true
-opt-level = "s"
+[workspace.package]
+version = "0.0.0"
+edition = "2024"
+authors = ["Gaia Team <192607617↯qq.com>"]
+license = "MPL-2.0"
+description = "Universal Grammar and Optimization Framework for cross-language and cross-hardware optimization"
+homepage = "https://gaia-assembly.netlify.app/chomsky/"
+documentation = "https://docs.rs/chomsky"
+readme = "README.md"
+
+[workspace.dependencies]
+# Internal projects
+chomsky-types = { version = "0.0.0", path = "packages/chomsky-types" }
+chomsky-uir = { version = "0.0.0", path = "packages/chomsky-uir" }
+chomsky-extract = { version = "0.0.0", path = "packages/chomsky-extract" }
+chomsky-glue = { version = "0.0.0", path = "packages/chomsky-glue" }
+chomsky-rule-engine = { version = "0.0.0", path = "packages/chomsky-rule-engine" }
+chomsky-cost = { version = "0.0.0", path = "packages/chomsky-cost" }
+chomsky-concretize = { version = "0.0.0", path = "packages/chomsky-concretize" }
+chomsky-context = { version = "0.0.0", path = "packages/chomsky-context" }
+chomsky = { version = "0.0.0", path = "packages/chomsky" }
+chomsky-rules = { version = "0.0.0", path = "packages/chomsky-rules" }
+chomsky-lifetime = { version = "0.0.0", path = "packages/chomsky-lifetime" }
+chomsky-emit = { version = "0.0.0", path = "packages/chomsky-emit" }
+
+# External projects for Local
+# oak-core = { path = "../oaks/projects/oak-core" }
+# oak-vfs = { path = "../oaks/projects/oak-vfs" }
+# clr-assembler = { path = "../project-gaia/examples/clr-assembler" }
+# elf-assembler = { path = "../project-gaia/examples/elf-assembler" }
+# gcn-assembler = { path = "../project-gaia/examples/gcn-assembler" }
+# jvm-assembler = { path = "../project-gaia/examples/jvm-assembler", package = "jasm-assembler" }
+# lua-assembler = { path = "../project-gaia/examples/lua-assembler" }
+# macho-assembler = { path = "../project-gaia/examples/macho-assembler" }
+# msl-assembler = { path = "../project-gaia/examples/msl-assembler" }
+# pe-assembler = { path = "../project-gaia/examples/pe-assembler" }
+# python-assembler = { path = "../project-gaia/examples/pyc-assembler" }
+# sass-assembler = { path = "../project-gaia/examples/sass-assembler" }
+# spirv-assembler = { path = "../project-gaia/examples/spirv-assembler" }
+# wasi-assembler = { path = "../project-gaia/examples/wasi-assembler" }
+# x86_64-assembler = { path = "../project-gaia/examples/x86_64-assembler" }
+# gaia-jit = { path = "../project-gaia/projects/gaia-jit" }
+# gaia-types = { path = "../project-gaia/projects/gaia-types" }
+# gaia-assembler = { path = "../project-gaia/projects/gaia-assembler" }
+
+# External projects for CI
+oak-core = "0.0.3"
+oak-vfs = "0.0.3"
+clr-assembler = "0.0.4"
+elf-assembler = "0.0.4"
+gcn-assembler = "0.0.4"
+jvm-assembler = { version = "0.0.4", package = "jasm-assembler" }
+lua-assembler = "0.0.4"
+macho-assembler = "0.0.4"
+msl-assembler = "0.0.4"
+pe-assembler = "0.0.4"
+python-assembler = "0.0.4"
+sass-assembler = "0.0.4"
+spirv-assembler = "0.0.4"
+wasi-assembler = "0.0.4"
+x86_64-assembler = "0.0.4"
+gaia-jit = "0.0.4"
+gaia-types = "0.0.4"
+gaia-assembler = "0.0.4"
+
+# Others
+hashbrown = "0.14.5"
+dashmap = "5.5.3"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.149"
+clap = { version = "4.5.57", features = ["derive"] }
+tempfile = "3.25.0"
+tracing = "0.1.44"

@@ -1,0 +1,17 @@
+[package]
+name = "chomsky-emit"
+version = { workspace = true }
+edition = { workspace = true }
+authors = { workspace = true }
+license = { workspace = true }
+description = "Code emission layer for Chomsky, bridging UIR to target assemblers"
+repository = "https://github.com/nyar-vm/project-chomsky/tree/main/packages/chomsky-emit"
+homepage = "https://gaia-assembly.netlify.app/chomsky/emit/"
+
+[dependencies]
+chomsky-extract = { workspace = true }
+chomsky-types = { workspace = true }
+chomsky-uir = { workspace = true }
+gaia-assembler = { workspace = true }
+gaia-types = { workspace = true }
+serde = { workspace = true }

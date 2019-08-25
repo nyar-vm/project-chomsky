@@ -1,0 +1,14 @@
+[package]
+name = "chomsky-concretize"
+version = { workspace = true }
+edition = { workspace = true }
+authors = { workspace = true }
+license = { workspace = true }
+description = "Concrete realization of UIR into target architecture models"
+repository = "https://github.com/nyar-vm/project-chomsky/tree/main/packages/chomsky-concretize"
+homepage = "https://gaia-assembly.netlify.app/chomsky/concretize/"
+
+[dependencies]
+chomsky-uir = { workspace = true }
+chomsky-rule-engine = { workspace = true }
+serde = { workspace = true }

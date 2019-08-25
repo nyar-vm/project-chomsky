@@ -1,0 +1,59 @@
+[package]
+name = "chomsky"
+version = { workspace = true }
+edition = { workspace = true }
+authors = { workspace = true }
+license = { workspace = true }
+description = "Main entry point and facade for the Chomsky optimization framework"
+repository = "https://github.com/nyar-vm/project-chomsky/tree/main/packages/chomsky"
+homepage = "https://gaia-assembly.netlify.app/chomsky/"
+
+[dependencies]
+chomsky-types = { workspace = true }
+chomsky-uir = { workspace = true }
+chomsky-cost = { workspace = true }
+chomsky-extract = { workspace = true }
+chomsky-context = { workspace = true }
+chomsky-glue = { workspace = true }
+chomsky-concretize = { workspace = true }
+chomsky-rule-engine = { workspace = true }
+chomsky-rules = { workspace = true }
+chomsky-lifetime = { workspace = true }
+chomsky-emit = { workspace = true }
+jvm-assembler = { workspace = true, optional = true }
+
+clr-assembler = { workspace = true, optional = true }
+elf-assembler = { workspace = true, optional = true }
+gcn-assembler = { workspace = true, optional = true }
+lua-assembler = { workspace = true, optional = true }
+macho-assembler = { workspace = true, optional = true }
+msl-assembler = { workspace = true, optional = true }
+pe-assembler = { workspace = true, optional = true }
+python-assembler = { workspace = true, optional = true }
+sass-assembler = { workspace = true, optional = true }
+spirv-assembler = { workspace = true, optional = true }
+wasi-assembler = { workspace = true, optional = true }
+x86_64-assembler = { workspace = true, optional = true }
+
+[features]
+default = [
+    "clr", "elf", "gcn", "jvm", "lua", "macho", "msl", "pe", "python", "sass", "spirv", "wasi", "x86"
+]
+clr = ["dep:clr-assembler"]
+elf = ["dep:elf-assembler"]
+gcn = ["dep:gcn-assembler"]
+jvm = ["dep:jvm-assembler"]
+lua = ["dep:lua-assembler"]
+macho = ["dep:macho-assembler"]
+msl = ["dep:msl-assembler"]
+pe = ["dep:pe-assembler"]
+python = ["dep:python-assembler"]
+sass = ["dep:sass-assembler"]
+spirv = ["dep:spirv-assembler"]
+wasi = ["dep:wasi-assembler"]
+x86 = ["dep:x86_64-assembler"]
+# oak-typescript = { path = "../../../oaks/examples/oak-typescript" }
+# oak-mojo = { workspace = true }
+# oak-kotlin = { workspace = true }
+# oak-swift = { workspace = true }
+# oak-zig = { workspace = true }

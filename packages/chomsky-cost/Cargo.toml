@@ -1,0 +1,12 @@
+[package]
+name = "chomsky-cost"
+version = { workspace = true }
+edition = { workspace = true }
+authors = { workspace = true }
+license = { workspace = true }
+description = "Multi-dimensional cost modeling for Chomsky framework"
+repository = "https://github.com/nyar-vm/project-chomsky/tree/main/packages/chomsky-cost"
+homepage = "https://gaia-assembly.netlify.app/chomsky/cost/"
+
+[dependencies]
+chomsky-uir = { workspace = true }

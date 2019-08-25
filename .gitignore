@@ -1,15 +1,28 @@
-# IDE
-.vscode
-.idea
-*.iml
-time-travel.*
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+
+# Node
+dist/
+cache/
+node_modules/
 
 # Rust
 target/
-Cargo.lock
-node_modules/
+
+# ASM
+*.exe
+*.pdb
+*.txt
+*.log
 
 
-# Wasm
-*.wasm
-package-lock.json
+# Python
+*.pyc
