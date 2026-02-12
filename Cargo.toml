@@ -25,7 +25,6 @@ license = "MPL-2.0"
 description = "Universal Grammar and Optimization Framework for cross-language and cross-hardware optimization"
 homepage = "https://gaia-assembly.netlify.app/chomsky/"
 documentation = "https://docs.rs/chomsky"
-readme = "README.md"
 
 [workspace.dependencies]
 # Internal projects
@@ -43,50 +42,50 @@ chomsky-lifetime = { version = "0.0.0", path = "packages/chomsky-lifetime" }
 chomsky-emit = { version = "0.0.0", path = "packages/chomsky-emit" }
 
 # External projects for Local
-# oak-core = { path = "../oaks/projects/oak-core" }
-# oak-vfs = { path = "../oaks/projects/oak-vfs" }
-# clr-assembler = { path = "../project-gaia/examples/clr-assembler" }
-# elf-assembler = { path = "../project-gaia/examples/elf-assembler" }
-# gcn-assembler = { path = "../project-gaia/examples/gcn-assembler" }
-# jvm-assembler = { path = "../project-gaia/examples/jvm-assembler", package = "jasm-assembler" }
-# lua-assembler = { path = "../project-gaia/examples/lua-assembler" }
-# macho-assembler = { path = "../project-gaia/examples/macho-assembler" }
-# msl-assembler = { path = "../project-gaia/examples/msl-assembler" }
-# pe-assembler = { path = "../project-gaia/examples/pe-assembler" }
-# python-assembler = { path = "../project-gaia/examples/pyc-assembler" }
-# sass-assembler = { path = "../project-gaia/examples/sass-assembler" }
-# spirv-assembler = { path = "../project-gaia/examples/spirv-assembler" }
-# wasi-assembler = { path = "../project-gaia/examples/wasi-assembler" }
-# x86_64-assembler = { path = "../project-gaia/examples/x86_64-assembler" }
-# gaia-jit = { path = "../project-gaia/projects/gaia-jit" }
-# gaia-types = { path = "../project-gaia/projects/gaia-types" }
-# gaia-assembler = { path = "../project-gaia/projects/gaia-assembler" }
+oak-core = { path = "../oaks/projects/oak-core" }
+oak-vfs = { path = "../oaks/projects/oak-vfs" }
+clr-assembler = { path = "../project-gaia/examples/clr-assembler" }
+elf-assembler = { path = "../project-gaia/examples/elf-assembler" }
+gcn-assembler = { path = "../project-gaia/examples/gcn-assembler" }
+jvm-assembler = { path = "../project-gaia/examples/jvm-assembler", package = "jasm-assembler" }
+lua-assembler = { path = "../project-gaia/examples/lua-assembler" }
+macho-assembler = { path = "../project-gaia/examples/macho-assembler" }
+msl-assembler = { path = "../project-gaia/examples/msl-assembler" }
+pe-assembler = { path = "../project-gaia/examples/pe-assembler" }
+python-assembler = { path = "../project-gaia/examples/pyc-assembler" }
+sass-assembler = { path = "../project-gaia/examples/sass-assembler" }
+spirv-assembler = { path = "../project-gaia/examples/spirv-assembler" }
+wasi-assembler = { path = "../project-gaia/examples/wasi-assembler" }
+x86_64-assembler = { path = "../project-gaia/examples/x86_64-assembler" }
+gaia-jit = { path = "../project-gaia/projects/gaia-jit" }
+gaia-types = { path = "../project-gaia/projects/gaia-types" }
+gaia-assembler = { path = "../project-gaia/projects/gaia-assembler" }
 
 # External projects for CI
-oak-core = "0.0.3"
-oak-vfs = "0.0.3"
-clr-assembler = "0.0.4"
-elf-assembler = "0.0.4"
-gcn-assembler = "0.0.4"
-jvm-assembler = { version = "0.0.4", package = "jasm-assembler" }
-lua-assembler = "0.0.4"
-macho-assembler = "0.0.4"
-msl-assembler = "0.0.4"
-pe-assembler = "0.0.4"
-python-assembler = "0.0.4"
-sass-assembler = "0.0.4"
-spirv-assembler = "0.0.4"
-wasi-assembler = "0.0.4"
-x86_64-assembler = "0.0.4"
-gaia-jit = "0.0.4"
-gaia-types = "0.0.4"
-gaia-assembler = "0.0.4"
+# oak-core = "0.0.3"
+# oak-vfs = "0.0.3"
+# clr-assembler = "0.0.5"
+# elf-assembler = "0.0.5"
+# gcn-assembler = "0.0.5"
+# jvm-assembler = { version = "0.0.4", package = "jasm-assembler" }
+# lua-assembler = "0.0.5"
+# macho-assembler = "0.0.5"
+# msl-assembler = "0.0.5"
+# pe-assembler = "0.0.5"
+# python-assembler = "0.0.5"
+# sass-assembler = "0.0.5"
+# spirv-assembler = "0.0.5"
+# wasi-assembler = "0.0.5"
+# x86_64-assembler = "0.0.5"
+# gaia-jit = "0.0.5"
+# gaia-types = "0.0.5"
+# gaia-assembler = "0.0.5"
 
 # Others
-hashbrown = "0.14.5"
-dashmap = "5.5.3"
+hashbrown = "0.16.1"
+dashmap = "6.1.0"
 serde = { version = "1.0.228", features = ["derive"] }
 serde_json = "1.0.149"
-clap = { version = "4.5.57", features = ["derive"] }
+clap = { version = "4.5.58", features = ["derive"] }
 tempfile = "3.25.0"
 tracing = "0.1.44"
